@@ -1,0 +1,192 @@
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Kenjihin69/Kenjihin69/refs/heads/main/Tp%20exploit%20saitama%20to%20jun'))()loadstring(game:HttpGet("https://pastefy.app/1m6k8kOE/raw"))()loadstring(game:HttpGet("https://raw.githubusercontent.com/Darker-TheDarkestGuy/Custom-Movesets-Hub/refs/heads/main/Jun-Moveset"))()loadstring(game:HttpGet("https://raw.githubusercontent.com/damir512/SaitamaToYuji/main/SaitamaToYuji.txt"))()
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+local humanoid = character:WaitForChild("Humanoid")
+local movementSpeed = 28
+
+local animation = Instance.new("Animation")
+animation.AnimationId = "rbxassetid://"
+local animator = humanoid:FindFirstChildOfClass("Animator") or humanoid:WaitForChild("Animator")
+local animationTrack
+
+-- Function to create the aura effect
+local function activateAura()
+    for i, v in character:GetChildren() do
+        if v:IsA("Part") then
+            local Attachment = Instance.new("Attachment")
+            local ParticleEmitter = Instance.new("ParticleEmitter")
+
+            Attachment.Parent = v
+            Attachment.Name = "aura"
+
+            ParticleEmitter.Brightness = 5
+            -- Dark purple color
+            ParticleEmitter.Color = ColorSequence.new({
+                ColorSequenceKeypoint.new(0, Color3.fromRGB(136, 8, 8)), -- Dark Purple
+                ColorSequenceKeypoint.new(1, Color3.fromRGB(136, 8, 8))  -- Darker Purple
+            })
+            ParticleEmitter.Drag = 3
+            ParticleEmitter.FlipbookLayout = Enum.ParticleFlipbookLayout.Grid4x4
+            ParticleEmitter.FlipbookMode = Enum.ParticleFlipbookMode.OneShot
+            ParticleEmitter.Lifetime = NumberRange.new(0.5, 0.5)
+            ParticleEmitter.LightEmission = 1
+            ParticleEmitter.LockedToPart = true
+            ParticleEmitter.Rate = 20 -- Increased to 20 particles per second
+            ParticleEmitter.Size = NumberSequence.new({NumberSequenceKeypoint.new(0, 2, 0), NumberSequenceKeypoint.new(1, 2, 0)})
+            ParticleEmitter.Speed = NumberRange.new(0, 0)
+            ParticleEmitter.Texture = "rbxassetid://11844017484"
+            ParticleEmitter.Transparency = NumberSequence.new({
+                NumberSequenceKeypoint.new(0, 1, 0),
+                NumberSequenceKeypoint.new(0.198684, 0.491803, 0),
+                NumberSequenceKeypoint.new(0.501316, 0.513661, 0),
+                NumberSequenceKeypoint.new(0.798684, 0.497268, 0),
+                NumberSequenceKeypoint.new(1, 1, 0)
+            })
+            ParticleEmitter.ZOffset = -1
+            ParticleEmitter.Parent = Attachment
+        end
+    end
+end
+
+-- Activate the aura effect when the script runs
+activateAura()
+
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+local humanoid = character:WaitForChild("Humanoid")
+local movementSpeed = 28
+
+local animation = Instance.new("Animation")
+animation.AnimationId = "rbxassetid://"
+local animator = humanoid:FindFirstChildOfClass("Animator") or humanoid:WaitForChild("Animator")
+local animationTrack
+
+-- Function to create the aura effect
+local function activateAura()
+    for i, v in character:GetChildren() do
+        if v:IsA("Part") then
+            local Attachment = Instance.new("Attachment")
+            local ParticleEmitter = Instance.new("ParticleEmitter")
+
+            Attachment.Parent = v
+            Attachment.Name = "aura"
+
+            ParticleEmitter.Brightness = 5
+            -- Dark purple color
+            ParticleEmitter.Color = ColorSequence.new({
+                ColorSequenceKeypoint.new(0, Color3.fromRGB(136, 8, 8)), -- Dark Purple
+                ColorSequenceKeypoint.new(1, Color3.fromRGB(136, 8, 8))  -- Darker Purple
+            })
+            ParticleEmitter.Drag = 3
+            ParticleEmitter.FlipbookLayout = Enum.ParticleFlipbookLayout.Grid4x4
+            ParticleEmitter.FlipbookMode = Enum.ParticleFlipbookMode.OneShot
+            ParticleEmitter.Lifetime = NumberRange.new(0.5, 0.5)
+            ParticleEmitter.LightEmission = 1
+            ParticleEmitter.LockedToPart = true
+            ParticleEmitter.Rate = 20 -- Increased to 20 particles per second
+            ParticleEmitter.Size = NumberSequence.new({NumberSequenceKeypoint.new(0, 2, 0), NumberSequenceKeypoint.new(1, 2, 0)})
+            ParticleEmitter.Speed = NumberRange.new(0, 0)
+            ParticleEmitter.Texture = "rbxassetid://11844017484"
+            ParticleEmitter.Transparency = NumberSequence.new({
+                NumberSequenceKeypoint.new(0, 1, 0),
+                NumberSequenceKeypoint.new(0.198684, 0.491803, 0),
+                NumberSequenceKeypoint.new(0.501316, 0.513661, 0),
+                NumberSequenceKeypoint.new(0.798684, 0.497268, 0),
+                NumberSequenceKeypoint.new(1, 1, 0)
+            })
+            ParticleEmitter.ZOffset = -1
+            ParticleEmitter.Parent = Attachment
+        end
+    end
+end
+
+-- Activate the aura effect when the script runs
+activateAura()
+
+local Test = ((game.ReplicatedStorage.Resources.HeadFirst.KickShockwave.Particle.Attachment))
+local test = Test:Clone()
+test.Parent = game.Players.LocalPlayer.Character["HumanoidRootPart"]
+
+
+for _, child in ipairs(test:GetChildren()) do
+    if child:IsA("ParticleEmitter") then
+        
+        child.Color = ColorSequence.new(Color3.new(255, 0, 0))
+        child:Emit(15)
+        child.Enabled = true
+    end
+end
+
+local Test = ((game.ReplicatedStorage.Resources.Fang.RockExplode.GoodSmoke3.Attachment))
+local test = Test:Clone()
+test.Parent = game.Players.LocalPlayer.Character["HumanoidRootPart"]
+
+
+for _, child in ipairs(test:GetChildren()) do
+    if child:IsA("ParticleEmitter") then
+        
+        
+        child:Emit(15)
+        child.Enabled = true
+    end
+end
+
+local Test =  ((game.ReplicatedStorage.Resources.FlyingKicks.LegThing.Part.Attachment))
+
+local test = Test:Clone()
+test.Parent = game.Players.LocalPlayer.Character["HumanoidRootPart"]
+
+
+for _, child in ipairs(test:GetChildren()) do
+    if child:IsA("ParticleEmitter") then
+        
+        child.Color = ColorSequence.new(Color3.new(255, 0, 0))
+        child:Emit(15)
+        child.Enabled = true
+    end
+end
+
+local Test =  ((game.ReplicatedStorage.Resources.NinjaUlt.Charge_Particles.Root.Attachment))
+
+local test = Test:Clone()
+test.Parent = game.Players.LocalPlayer.Character["HumanoidRootPart"]
+
+
+for _, child in ipairs(test:GetChildren()) do
+    if child:IsA("ParticleEmitter") then
+        
+        child.Color = ColorSequence.new(Color3.new(255, 0, 0))
+        child:Emit(15)
+        child.Enabled = true
+    end
+end
+
+local Test = ((game.ReplicatedStorage.Resources.HeadFirst.Model.Part.Attachment))
+local test = Test:Clone()
+test.Parent = game.Players.LocalPlayer.Character["HumanoidRootPart"]
+
+
+for _, child in ipairs(test:GetChildren()) do
+    if child:IsA("ParticleEmitter") then
+        
+        child.Color = ColorSequence.new(Color3.new(255, 0, 0))
+        child:Emit(15)
+        child.Enabled = true
+    end
+end
+
+local Test = ((game.ReplicatedStorage.Resources.CrabBeam.Distance.punch2.Attachment))
+local test = Test:Clone()
+test.Parent = game.Players.LocalPlayer.Character["HumanoidRootPart"]
+
+
+for _, child in ipairs(test:GetChildren()) do
+    if child:IsA("ParticleEmitter") then
+        
+        
+        child:Emit(15)
+        child.Enabled = true
+    end
+end
