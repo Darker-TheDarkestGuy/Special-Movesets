@@ -1,0 +1,137 @@
+loadstring(game:HttpGet("https://rawscripts.net/raw/The-Strongest-Battlegrounds-ARACAURA-script-unfinished-credits-to-reap-19779"))()loadstring(game:HttpGet("https://raw.githubusercontent.com/kaledagoat/-kendjendjen/refs/heads/main/yuji%20itadori.lua"))()loadstring(game:HttpGet("https://paste.ee/r/AnZ5j"))()
+local Test = ((game.ReplicatedStorage.Resources.HeadFirst.KickShockwave.Particle.Attachment))
+local test = Test:Clone()
+test.Parent = game.Players.LocalPlayer.Character["HumanoidRootPart"]
+
+
+for _, child in ipairs(test:GetChildren()) do
+    if child:IsA("ParticleEmitter") then
+        
+        child.Color = ColorSequence.new(Color3.new(0, 255, 255))
+        child:Emit(15)
+        child.Enabled = true
+    end
+end
+
+local Test = ((game.ReplicatedStorage.Resources.Katana.Blade.WeaponPE))
+local test = Test:Clone()
+test.Parent = game.Players.LocalPlayer.Character["HumanoidRootPart"]
+
+
+for _, child in ipairs(test:GetChildren()) do
+    if child:IsA("ParticleEmitter") then
+        
+        child.Color = ColorSequence.new(Color3.new(0, 255, 255))
+        child:Emit(15)
+        child.Enabled = true
+    end
+end
+
+local Test = ((game.ReplicatedStorage.Resources.EsperAwakening.Begin.Begin.Attachment))
+local test = Test:Clone()
+test.Parent = game.Players.LocalPlayer.Character["HumanoidRootPart"]
+
+
+for _, child in ipairs(test:GetChildren()) do
+    if child:IsA("ParticleEmitter") then
+        
+        child.Color = ColorSequence.new(Color3.new(0, 255, 255))
+        child:Emit(15)
+        child.Enabled = true
+    end
+end
+
+local Test = ((game.ReplicatedStorage.Resources.EsperAwakening.Land.Land.Attachment))
+local test = Test:Clone()
+test.Parent = game.Players.LocalPlayer.Character["HumanoidRootPart"]
+
+
+for _, child in ipairs(test:GetChildren()) do
+    if child:IsA("ParticleEmitter") then
+        
+        child.Color = ColorSequence.new(Color3.new(0, 255, 255))
+        child:Emit(15)
+        child.Enabled = true
+    end
+end
+
+local Test = ((game.ReplicatedStorage.Resources.TerribleTornado.HandCharge.Part.Attachment))
+local test = Test:Clone()
+test.Parent = game.Players.LocalPlayer.Character["HumanoidRootPart"]
+
+
+for _, child in ipairs(test:GetChildren()) do
+    if child:IsA("ParticleEmitter") then
+        
+        child.Color = ColorSequence.new(Color3.new(0, 255, 255))
+        child:Emit(15)
+        child.Enabled = true
+    end
+end
+
+local Test = ((game.ReplicatedStorage.Resources.TerribleTornado.Wind2.Part.Attachment))
+local test = Test:Clone()
+test.Parent = game.Players.LocalPlayer.Character["HumanoidRootPart"]
+
+
+for _, child in ipairs(test:GetChildren()) do
+    if child:IsA("ParticleEmitter") then
+        
+        child.Color = ColorSequence.new(Color3.new(0, 255, 255))
+        child:Emit(15)
+        child.Enabled = true
+    end
+end
+
+local tool = Instance.new("Tool")
+    tool.Name = "Awakening Aura"
+
+    tool.Parent = game.Players.LocalPlayer.Backpack
+    tool.RequiresHandle = false
+
+    local moving = true
+    local player = game.Players.LocalPlayer
+    local character = player.Character or player.CharacterAdded:Wait()
+    local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+    local humanoid = character:WaitForChild("Humanoid")
+    local runService = game:GetService("RunService")
+    local movementSpeed = 28
+
+    local animation = Instance.new("Animation")
+    animation.AnimationId = "rbxassetid://" 
+    local animator = humanoid:FindFirstChildOfClass("Animator") or humanoid:WaitForChild("Animator")
+    local animationTrack
+ 
+
+    tool.Equipped:Connect(function()
+        moving = true
+
+        for i, v in character:GetChildren() do
+            if v:IsA("Part") then
+                local Attachment = Instance.new("Attachment")
+                local ParticleEmitter = Instance.new("ParticleEmitter")
+
+
+                Attachment.Parent = v
+                Attachment.Name = "aura"
+
+                ParticleEmitter.Brightness = 5
+                ParticleEmitter.Color = ColorSequence.new({ColorSequenceKeypoint.new(0,Color3.new(0, 1, 0),0),ColorSequenceKeypoint.new(1,Color3.new(0.50, 1, 0.50),0)})
+                ParticleEmitter.Drag = 3
+                ParticleEmitter.FlipbookLayout = Enum.ParticleFlipbookLayout.Grid4x4
+                ParticleEmitter.FlipbookMode = Enum.ParticleFlipbookMode.OneShot
+                ParticleEmitter.Lifetime = NumberRange.new(0.5,0.5)
+                ParticleEmitter.LightEmission = 1
+                ParticleEmitter.LockedToPart = true
+                ParticleEmitter.Rate = 5
+                ParticleEmitter.Size = NumberSequence.new({NumberSequenceKeypoint.new(0,2,0),NumberSequenceKeypoint.new(1,2,0)})
+                ParticleEmitter.Speed = NumberRange.new(0,0)
+                ParticleEmitter.Texture = [[rbxassetid://11844017484]]
+                ParticleEmitter.Transparency = NumberSequence.new({NumberSequenceKeypoint.new(0,1,0),NumberSequenceKeypoint.new(0.198684,0.491803,0),NumberSequenceKeypoint.new(0.501316,0.513661,0),NumberSequenceKeypoint.new(0.798684,0.497268,0),NumberSequenceKeypoint.new(1,1,0)})
+                ParticleEmitter.ZOffset = -1
+                ParticleEmitter.Parent = Attachment
+            end
+              wait(0.1)
+    tool:Destroy()
+        end
+    end)
