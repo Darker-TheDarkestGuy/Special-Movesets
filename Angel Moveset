@@ -89,6 +89,16 @@ local Test = game:GetService("ReplicatedStorage").Resources.AtomicSlash.NewSmoke
 local test = Test:Clone()
 test.Parent = game.Players.LocalPlayer.Character["HumanoidRootPart"]
 
+
+for _, child in ipairs(test:GetChildren()) do
+    if child:IsA("ParticleEmitter") then
+        
+        child.Color = ColorSequence.new(Color3.new(0, 255, 255))
+        child:Emit(15)
+        child.Enabled = true
+    end
+end
+
 local Test = game:GetService("ReplicatedStorage").Resources.AtomicSlash.explosion.Part.Attachment
 local test = Test:Clone()
 test.Parent = game.Players.LocalPlayer.Character["HumanoidRootPart"]
@@ -98,6 +108,20 @@ for _, child in ipairs(test:GetChildren()) do
     if child:IsA("ParticleEmitter") then
         
         child.Color = ColorSequence.new(Color3.new(0, 255, 255))
+        child:Emit(15)
+        child.Enabled = true
+    end
+end
+
+local Test = game:GetService("ReplicatedStorage").Resources.Dragon.Explosion.Part.WindFast
+local test = Test:Clone()
+test.Parent = game.Players.LocalPlayer.Character["HumanoidRootPart"]
+
+
+for _, child in ipairs(test:GetChildren()) do
+    if child:IsA("ParticleEmitter") then
+        
+        
         child:Emit(15)
         child.Enabled = true
     end
