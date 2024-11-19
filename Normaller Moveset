@@ -68,3 +68,5 @@ for _, child in ipairs(test:GetChildren()) do
         child.Enabled = true
     end
 end
+
+game.Lighting.ClockTime = 0
