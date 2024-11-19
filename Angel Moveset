@@ -99,7 +99,7 @@ for _, child in ipairs(test:GetChildren()) do
     end
 end
 
-local Test = game:GetService("ReplicatedStorage").Resources.AtomicSlash.NewSmokey.NEWSmokey.Attachment
+local Test = game:GetService("ReplicatedStorage").Resources.AtomicSlash.explosion.Part.Attachment
 local test = Test:Clone()
 test.Parent = game.Players.LocalPlayer.Character["HumanoidRootPart"]
 
