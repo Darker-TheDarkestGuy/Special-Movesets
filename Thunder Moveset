@@ -1,0 +1,201 @@
+loadstring(game:HttpGet("https://rawscripts.net/raw/The-Strongest-Battlegrounds-Goku-Moveset-V2-17977"))()loadstring(game:HttpGet("https://rawscripts.net/raw/The-Strongest-Battlegrounds-Hero-hunter-moveset-into-OP-goku-moveset-17468"))()loadstring(game:HttpGet("https://raw.githubusercontent.com/Nova2ezz/sonic-exe-moveset-3/refs/heads/main/3"))()loadstring(game:HttpGet("https://raw.githubusercontent.com/LolnotaKid/CustomV2/refs/heads/main/CustomAnimV2.txt"))()loadstring(game:HttpGet("https://rawscripts.net/raw/The-Strongest-Battlegrounds-Hero-hunter-moveset-into-OP-goku-moveset-17468"))()
+local player = game.Players.LocalPlayer
+local c3 = Color3.fromHex("FFB100") 
+local connections = {}
+
+local function hawk_tuah(pe)
+
+    if pe:IsA("ParticleEmitter") or pe:IsA("Trail") then
+        pe.Color = ColorSequence.new(c3)
+        if not pe.LightEmission then
+            pe.LightEmission = 1 
+        end
+
+    elseif pe:IsA("Decal") then
+        pe.Color3 = Color3.new(c3.R + 0.33, c3.G + 0.33, c3.B + 0.33)
+
+    elseif pe:IsA("Light") then
+        pe.Color = c3
+    end
+end
+
+local function rizz(char)
+   
+    local weapons = {
+        "#KATANAWEAPON",
+        "#NinjaKATANA",
+        "#BATWEAPON"
+    }
+    
+    for _, weaponName in ipairs(weapons) do
+        local weapon = char:FindFirstChild(weaponName)
+        if weapon then
+            for _, pe in weapon:GetDescendants() do
+                hawk_tuah(pe)
+            end
+            table.insert(connections, weapon.DescendantAdded:Connect(hawk_tuah))
+        end
+    end
+
+ 
+    for _, pe in char:GetDescendants() do
+        hawk_tuah(pe)
+    end
+
+    table.insert(connections, char.DescendantAdded:Connect(hawk_tuah))
+end
+
+local function onPlayerAdded(player)
+    if player:IsA("Model") then
+        rizz(player)
+    else
+        rizz(player.Character or player.CharacterAdded:Wait())
+        table.insert(connections, player.CharacterAdded:Connect(rizz))
+    end
+end
+
+
+onPlayerAdded(player)
+
+local Test = ((game.ReplicatedStorage.Resources.CrabBeam.Beamy.Start.Attachment))
+local test = Test:Clone()
+test.Parent = game.Players.LocalPlayer.Character["HumanoidRootPart"]
+
+
+for _, child in ipairs(test:GetChildren()) do
+    if child:IsA("ParticleEmitter") then
+        
+  
+        child:Emit(15)
+        child.Enabled = true
+    end
+end
+
+local Test = game:GetService("ReplicatedStorage").Resources.Dragon.Explosion.Part.WindFast
+local test = Test:Clone()
+test.Parent = game.Players.LocalPlayer.Character["HumanoidRootPart"]
+
+
+for _, child in ipairs(test:GetChildren()) do
+    if child:IsA("ParticleEmitter") then
+        
+        
+        child:Emit(15)
+        child.Enabled = true
+    end
+end
+
+local Test = game:GetService("ReplicatedStorage").Resources.Sunrise.Constant2.Part.WindyTime
+local test = Test:Clone()
+test.Parent = game.Players.LocalPlayer.Character["HumanoidRootPart"]
+
+
+for _, child in ipairs(test:GetChildren()) do
+    if child:IsA("ParticleEmitter") then
+        
+        child.Color = ColorSequence.new(Color3.new(0, 255, 255))
+        child:Emit(15)
+        child.Enabled = true
+    end
+end
+
+local Test = game:GetService("ReplicatedStorage").Resources.AtomicSlash.explosion.Part.Attachment
+local test = Test:Clone()
+test.Parent = game.Players.LocalPlayer.Character["HumanoidRootPart"]
+
+
+for _, child in ipairs(test:GetChildren()) do
+    if child:IsA("ParticleEmitter") then
+        
+        child.Color = ColorSequence.new(Color3.new(0, 255, 255))
+        child:Emit(15)
+        child.Enabled = true
+    end
+end
+
+local Test = game:GetService("ReplicatedStorage").Resources.AtomicSlash.NewSmokey.NEWSmokey.Attachment
+local test = Test:Clone()
+test.Parent = game.Players.LocalPlayer.Character["HumanoidRootPart"]
+
+
+for _, child in ipairs(test:GetChildren()) do
+    if child:IsA("ParticleEmitter") then
+        
+        child.Color = ColorSequence.new(Color3.new(0, 255, 255))
+        child:Emit(15)
+        child.Enabled = true
+    end
+end
+
+local Test =  ((game.ReplicatedStorage.Resources.Sunrise.FloorNew.Part.Attachment))
+
+local test = Test:Clone()
+test.Parent = game.Players.LocalPlayer.Character["HumanoidRootPart"]
+
+
+for _, child in ipairs(test:GetChildren()) do
+    if child:IsA("ParticleEmitter") then
+        
+        child.Color = ColorSequence.new(Color3.new(255, 0, 0))
+        child:Emit(15)
+        child.Enabled = true
+    end
+end
+
+local player = game.Players.LocalPlayer
+local c3 = Color3.fromHex("FFB100") 
+local connections = {}
+
+local function hawk_tuah(pe)
+
+    if pe:IsA("ParticleEmitter") or pe:IsA("Trail") then
+        pe.Color = ColorSequence.new(c3)
+        if not pe.LightEmission then
+            pe.LightEmission = 1 
+        end
+
+    elseif pe:IsA("Decal") then
+        pe.Color3 = Color3.new(c3.R + 0.33, c3.G + 0.33, c3.B + 0.33)
+
+    elseif pe:IsA("Light") then
+        pe.Color = c3
+    end
+end
+
+local function rizz(char)
+   
+    local weapons = {
+        "#KATANAWEAPON",
+        "#NinjaKATANA",
+        "#BATWEAPON"
+    }
+    
+    for _, weaponName in ipairs(weapons) do
+        local weapon = char:FindFirstChild(weaponName)
+        if weapon then
+            for _, pe in weapon:GetDescendants() do
+                hawk_tuah(pe)
+            end
+            table.insert(connections, weapon.DescendantAdded:Connect(hawk_tuah))
+        end
+    end
+
+ 
+    for _, pe in char:GetDescendants() do
+        hawk_tuah(pe)
+    end
+
+    table.insert(connections, char.DescendantAdded:Connect(hawk_tuah))
+end
+
+local function onPlayerAdded(player)
+    if player:IsA("Model") then
+        rizz(player)
+    else
+        rizz(player.Character or player.CharacterAdded:Wait())
+        table.insert(connections, player.CharacterAdded:Connect(rizz))
+    end
+end
+
+
+onPlayerAdded(player)
