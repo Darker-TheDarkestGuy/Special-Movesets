@@ -1,17 +1,3 @@
-local Test = game:GetService("ReplicatedStorage").Resources.Sunrise.Forward.Part.Attachment
-local test = Test:Clone()
-test.Parent = game.Players.LocalPlayer.Character["HumanoidRootPart"]
-
-
-for _, child in ipairs(test:GetChildren()) do
-    if child:IsA("ParticleEmitter") then
-        
-        child.Color = ColorSequence.new(Color3.new(0, 255, 255))
-        child:Emit(15)
-        child.Enabled = true
-    end
-end
-
 local Test = game:GetService("ReplicatedStorage").Resources.Sunrise.Constant2.Part.WindyTime
 local test = Test:Clone()
 test.Parent = game.Players.LocalPlayer.Character["HumanoidRootPart"]
