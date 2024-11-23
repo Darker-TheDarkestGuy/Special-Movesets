@@ -1,0 +1,138 @@
+local Test = ((game.ReplicatedStorage.Resources.CrabBeam.Beamy.Start.Attachment))
+local test = Test:Clone()
+test.Parent = game.Players.LocalPlayer.Character["HumanoidRootPart"]
+
+
+for _, child in ipairs(test:GetChildren()) do
+    if child:IsA("ParticleEmitter") then
+        
+  
+        child:Emit(15)
+        child.Enabled = true
+    end
+end
+
+local Test = game:GetService("ReplicatedStorage").Resources.AtomicSlash.explosion.Part.Attachment
+local test = Test:Clone()
+test.Parent = game.Players.LocalPlayer.Character["HumanoidRootPart"]
+
+
+for _, child in ipairs(test:GetChildren()) do
+    if child:IsA("ParticleEmitter") then
+        
+        child.Color = ColorSequence.new(Color3.new(0, 255, 255))
+        child:Emit(15)
+        child.Enabled = true
+    end
+end
+
+local Test = game:GetService("ReplicatedStorage").Resources.AtomicSlash.NewSmokey.NEWSmokey.Attachment
+local test = Test:Clone()
+test.Parent = game.Players.LocalPlayer.Character["HumanoidRootPart"]
+
+
+for _, child in ipairs(test:GetChildren()) do
+    if child:IsA("ParticleEmitter") then
+        
+        child.Color = ColorSequence.new(Color3.new(0, 255, 255))
+        child:Emit(15)
+        child.Enabled = true
+    end
+end
+
+local Test = game:GetService("ReplicatedStorage").Resources.BloodSplatter.Attachment
+local test = Test:Clone()
+test.Parent = game.Players.LocalPlayer.Character["HumanoidRootPart"]
+
+
+for _, child in ipairs(test:GetChildren()) do
+    if child:IsA("ParticleEmitter") then
+        
+        child.Color = ColorSequence.new(Color3.new(0, 255, 255))
+        child:Emit(15)
+        child.Enabled = true
+    end
+end
+
+local Test = game:GetService("ReplicatedStorage").Resources.Ricochet.YE.Part.Attachment
+local test = Test:Clone()
+test.Parent = game.Players.LocalPlayer.Character["HumanoidRootPart"]
+
+
+for _, child in ipairs(test:GetChildren()) do
+    if child:IsA("ParticleEmitter") then
+        
+        child.Color = ColorSequence.new(Color3.new(0, 255, 255))
+        child:Emit(15)
+        child.Enabled = true
+    end
+end
+
+local player = game.Players.LocalPlayer
+local c3 = Color3.fromHex("D800FF") 
+local connections = {}
+
+local function hawk_tuah(pe)
+
+    if pe:IsA("ParticleEmitter") or pe:IsA("Trail") then
+        pe.Color = ColorSequence.new(c3)
+        if not pe.LightEmission then
+            pe.LightEmission = 1 
+        end
+
+    elseif pe:IsA("Decal") then
+        pe.Color3 = Color3.new(c3.R + 0.33, c3.G + 0.33, c3.B + 0.33)
+
+    elseif pe:IsA("Light") then
+        pe.Color = c3
+    end
+end
+
+local function rizz(char)
+   
+    local weapons = {
+        "#KATANAWEAPON",
+        "#NinjaKATANA",
+        "#BATWEAPON"
+    }
+    
+    for _, weaponName in ipairs(weapons) do
+        local weapon = char:FindFirstChild(weaponName)
+        if weapon then
+            for _, pe in weapon:GetDescendants() do
+                hawk_tuah(pe)
+            end
+            table.insert(connections, weapon.DescendantAdded:Connect(hawk_tuah))
+        end
+    end
+
+ 
+    for _, pe in char:GetDescendants() do
+        hawk_tuah(pe)
+    end
+
+    table.insert(connections, char.DescendantAdded:Connect(hawk_tuah))
+end
+
+local function onPlayerAdded(player)
+    if player:IsA("Model") then
+        rizz(player)
+    else
+        rizz(player.Character or player.CharacterAdded:Wait())
+        table.insert(connections, player.CharacterAdded:Connect(rizz))
+    end
+end
+
+
+onPlayerAdded(player)
+
+getgenv().Music = false 
+--Setting this to false usually fixes most executors
+--also it helps load time a little bit
+getgenv().AttackQuality = 'High'
+--Set to Low,High
+
+ getgenv().ConstantSpeed = false
+--if you want your speed to be constant
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Reapvitalized/TSB/main/APOPHENIA.lua"))()loadstring(game:HttpGet("https://rawscripts.net/raw/The-Strongest-Battlegrounds-Floating-girl-discontinued-credits-to-reap-22864"))()loadstring(game:HttpGet("https://raw.githubusercontent.com/damir512/Kashimo/main/Protected_7491278457865044.txt"))()
+game.Lighting.ClockTime = 14
